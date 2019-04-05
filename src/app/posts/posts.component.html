@@ -1,0 +1,10 @@
+<ul class="posts" *ngFor="let post of posts">
+  <div>
+    <h2 >{{post.titre}}<div align="right">{{post.createAt | date: 'short' | uppercase}}</div></h2>
+    <p>{{post.content}}</p>
+    <button class="btn btn-success"
+            [disabled]="post.loveIts"
+             (click)="onClick()">Love it!</button>
+    <button class="btn_red btn-success" [disabled]="post.loveIts">Don't love it!</button>
+  </div>
+</ul>
